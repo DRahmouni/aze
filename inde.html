@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AR Dish Demo</title>
+  <!-- Import model-viewer component -->
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      min-height: 100vh;
+      background: #f9f9f9;
+    }
+    h1 {
+      margin: 20px 0;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    model-viewer {
+      width: 90vw;
+      max-width: 600px;
+      height: 60vh;
+      background-color: #ffffff;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>View Dish in AR</h1>
+  <model-viewer
+    src="https://raw.githubusercontent.com/DRahmouni/aze/e7a318fc93d121c7d51f7255cdabc649b4606390/dish.glb"
+    alt="Dish 3D Model"
+    ar
+    auto-rotate
+    camera-controls
+    ar-modes="scene-viewer quick-look webxr"
+    shadow-intensity="1"
+    style="touch-action: pan-y;"
+  >
+  </model-viewer>
+</body>
+</html>
